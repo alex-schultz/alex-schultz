@@ -49,7 +49,7 @@ What goes on the dashboard is up to you. We hire people who can decide.
 - Don't add new top-level dependencies unless you really need to.
 - pnpm only.
 - Node 22.5 or newer (the local database uses Node's built-in `node:sqlite`). `.nvmrc` is provided.
-- The page has to look reasonable on a phone — Dana's at the airport a lot, so 375px wide must work. ArmorHQ logo is at `public/logo.svg`. Put it in the header.
+- The page has to look reasonable on a phone — Dana's at the airport a lot, so 375px wide must work. ArmorHQ logo is at `public/logo.png`. Put it in the header.
 
 ## The afterlife
 
