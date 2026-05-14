@@ -109,8 +109,9 @@ describe("getConnectedCallsLast7Days", () => {
     insertCall(db, "a1", iso(2), "voicemail");
     insertCall(db, "a1", iso(2), "no_answer");
 
-    // Just past the trailing edge (7+ days ago) — should NOT count.
-    insertCall(db, "a1", iso(7, 13), "connected"); // > 7 days ago
+    // Just past the trailing edge — should NOT count. NOW is at 12:00 UTC,
+    // so a row at 11:00 UTC 7 days ago is 7d+1h ago, outside the window.
+    insertCall(db, "a1", iso(7, 11), "connected");
     insertCall(db, "a1", iso(10), "connected");
 
     // Future-dated row (seed has a couple of these) — should NOT count.
